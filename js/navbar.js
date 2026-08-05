@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <a href="index.html" class="logo-text flex items-center gap-2">
-          <img src="img/algohub-logo.png" alt="Algo Hub logo" class="logo-img">
+          <img src="img/algohub-icon.png" alt="Algo Hub logo" class="logo-img">
           <span class="flex items-center gap-0.5"><span class="logo-algo">Algo</span><span class="logo-hub">Hub</span></span>
         </a>
 
