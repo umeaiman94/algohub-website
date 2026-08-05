@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+  (function() {
+    try {
+      var saved = localStorage.getItem('algohub-theme');
+      var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    } catch (e) {}
+  })();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register — Algo Hub</title>
+<meta name="description" content="Create your Algo Hub account and start learning, building, and growing with our courses and services.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: { extend: { fontFamily: { display: ['Space Grotesk', 'sans-serif'], sans: ['Inter', 'sans-serif'] } } },
+  };
+</script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-sans" data-page="register">
+<!-- ================= SPLASH SCREEN ================= -->
+<div id="splash-screen">
+  <img src="img/algohub-logo.png" alt="Algo Hub logo">
+</div>
+<header id="site-navbar"></header>
+
+<section class="min-h-[calc(100vh-64px)] grid lg:grid-cols-2">
+
+  <!-- Left: form -->
+  <div class="flex items-center justify-center px-6 py-16 order-2 lg:order-1">
+    <div class="w-full max-w-md" data-reveal="up">
+      <div class="lg:hidden mb-8">
+        <a href="index.html" class="logo-text flex items-center gap-0.5">
+          <span class="logo-algo">Algo</span><span class="logo-hub">Hub</span>
+        </a>
+      </div>
+
+      <h1 class="font-display text-3xl font-bold mb-2">Create your account</h1>
+      <p class="text-[--grey-1] mb-8">Join Algo Hub and start building your future today.</p>
+
+      <form class="space-y-5" onsubmit="return handleDemoSubmit(event, 'Account created ✓')">
+        <div>
+          <label for="reg-name" class="block text-sm font-medium mb-1.5">Full Name</label>
+          <input id="reg-name" type="text" required placeholder="Your full name" class="input-field">
+        </div>
+
+        <div>
+          <label for="reg-email" class="block text-sm font-medium mb-1.5">Email</label>
+          <input id="reg-email" type="email" required placeholder="you@example.com" class="input-field">
+        </div>
+
+        <div>
+          <label for="reg-phone" class="block text-sm font-medium mb-1.5">Phone Number</label>
+          <input id="reg-phone" type="tel" required placeholder="+92 XXX XXXXXXX" class="input-field">
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label for="reg-password" class="block text-sm font-medium mb-1.5">Password</label>
+            <div class="relative">
+              <input id="reg-password" type="password" required placeholder="Create password" class="input-field pr-11">
+              <button type="button" data-toggle-password="reg-password" aria-label="Show password" class="absolute right-3.5 top-1/2 -translate-y-1/2 text-[--grey-2] hover:text-[--grad-1] transition-colors">
+                <i data-lucide="eye" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+          <div>
+            <label for="reg-confirm" class="block text-sm font-medium mb-1.5">Confirm Password</label>
+            <div class="relative">
+              <input id="reg-confirm" type="password" required placeholder="Confirm password" class="input-field pr-11">
+              <button type="button" data-toggle-password="reg-confirm" aria-label="Show password" class="absolute right-3.5 top-1/2 -translate-y-1/2 text-[--grey-2] hover:text-[--grad-1] transition-colors">
+                <i data-lucide="eye" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <label class="flex items-start gap-2.5 text-sm text-[--grey-1] cursor-pointer">
+          <input type="checkbox" required class="mt-0.5 rounded border-[--border-light] text-[--grad-1] focus:ring-[--grad-2]">
+          I agree to the <a href="#" class="font-medium" style="color:var(--grad-1)">Terms of Service</a> and <a href="#" class="font-medium" style="color:var(--grad-1)">Privacy Policy</a>
+        </label>
+
+        <button type="submit" class="btn-primary w-full">Create Account</button>
+      </form>
+
+      <p class="text-sm text-[--grey-1] text-center mt-8">
+        Already have an account? <a href="login.html" class="font-semibold" style="color:var(--grad-1)">Login</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Right: branding / illustration -->
+  <div class="auth-panel hidden lg:flex flex-col justify-between p-12 relative overflow-hidden order-1 lg:order-2">
+    <div class="hero-grid opacity-25 absolute inset-0"></div>
+    <a href="index.html" class="relative logo-text flex items-center gap-0.5 self-end">
+      <span class="text-white">Algo</span><span class="text-white/70">Hub</span>
+    </a>
+
+    <div class="relative">
+      <canvas id="hero-network" class="block rounded-2xl" style="height:280px;"></canvas>
+      <h2 class="font-display text-3xl font-bold text-white mt-10 leading-tight">
+        Start building the skills the future runs on.
+      </h2>
+      <p class="text-white/80 mt-4 max-w-sm">
+        Get access to industry-focused courses, real projects, and a community of builders.
+      </p>
+    </div>
+
+    <div class="relative flex items-center gap-8 text-white/85 text-sm">
+      <div><span class="font-display text-xl font-bold text-white">30+</span><br>Tech Solutions</div>
+      <div><span class="font-display text-xl font-bold text-white">50+</span><br>Startups</div>
+      <div><span class="font-display text-xl font-bold text-white">20+</span><br>Experts</div>
+    </div>
+  </div>
+</section>
+
+<div id="modal-root"></div>
+
+<script src="js/navbar.js"></script>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+  (function() {
+    try {
+      var saved = localStorage.getItem('algohub-theme');
+      var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    } catch (e) {}
+  })();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — Algo Hub</title>
+<meta name="description" content="SaaS development, AI solutions, machine learning, web & mobile development, cloud, automation, and digital marketing services from Algo Hub.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: { extend: { fontFamily: { display: ['Space Grotesk', 'sans-serif'], sans: ['Inter', 'sans-serif'] } } },
+  };
+</script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-sans" data-page="services">
+<!-- ================= SPLASH SCREEN ================= -->
+<div id="splash-screen">
+  <img src="img/algohub-logo.png" alt="Algo Hub logo">
+</div>
+<header id="site-navbar"></header>
+
+<!-- ================= HERO ================= -->
+<section class="relative overflow-hidden py-20 lg:py-24">
+  <div class="hero-bg">
+    <div class="hero-grid"></div>
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+  </div>
+  <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center" data-reveal="up">
+    <span class="section-eyebrow">Our Services</span>
+    <h1 class="font-display text-4xl sm:text-5xl font-bold mt-4 mb-6 leading-tight">
+      Technology Services for Businesses & Startups
+    </h1>
+    <p class="text-lg text-[--grey-1] leading-relaxed max-w-2xl mx-auto">
+      We provide innovative technology solutions that help startups, SMEs, and organizations accelerate their digital transformation journey.
+    </p>
+  </div>
+</section>
+
+<!-- ================= SERVICES GRID ================= -->
+<section class="py-20">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <button data-modal-open="saas" class="card card-gradient-border p-7 text-left" data-reveal="up">
+        <div class="card-icon-wrap mb-5"><i data-lucide="layout-dashboard" class="w-5 h-5"></i></div>
+        <h3 class="font-display text-lg font-semibold mb-2">SaaS Product Development</h3>
+        <p class="text-sm text-[--grey-1] mb-5">Custom Software as a Service platforms designed for scalability, security, and business growth.</p>
+        <span class="inline-flex items-center gap-1.5 text-sm font-semibold" style="color:var(--grad-1)">View details <i data-lucide="arrow-up-right" class="w-4 h-4 card-arrow"></i></span>
+      </button>
+
+      <button data-modal-open="ai" class="card card-gradient-border p-7 text-left" data-reveal="up">
+        <div class="card-icon-wrap mb-5"><i data-lucide="brain-circuit" class="w-5 h-5"></i></div>
+        <h3 class="font-display text-lg font-semibold mb-2">Artificial Intelligence Solutions</h3>
+        <p class="text-sm text-[--grey-1] mb-5">AI-powered applications, intelligent automation, predictive analytics, and recommendation systems.</p>
+        <span class="inline-flex items-center gap-1.5 text-sm font-semibold" style="color:var(--grad-1)">View details <i data-lucide="arrow-up-right" class="w-4 h-4 card-arrow"></i></span>
+      </button>
+
+      <button data-modal-open="ml" class="card card-gradient-border p-7 text-left" data-reveal="up">
+        <div class="card-icon-wrap mb-5"><i data-lucide="network" class="w-5 h-5"></i></div>
+        <h3 class="font-display text-lg font-semibold mb-2">Machine Learning Development</h3>
+        <p class="text-sm text-[--grey-1] mb-5">Building custom ML models for forecasting, classification, sentiment analysis, and decision-making.</p>
+        <span class="inline-flex items-center gap-1.5 text-sm font-semibold" style="color:var(--grad-1)">View details <i data-lucide="arrow-up-right" class="w-4 h-4 card-arrow"></i></span>
+      </button>
+
+      <button data-modal-open="web" class="card card-gradient-border p-7 text-left" data-reveal="up">
+        <div class="card-icon-wrap mb-5"><i data-lucide="code-2" class="w-5 h-5"></i></div>
+        <h3 class="font-display text-lg font-semibold mb-2">Web Development</h3>
+        <p class="text-sm text-[--grey-1] mb-5">Modern, responsive, high-performance websites using the latest technologies.</p>
+        <span class="inline-flex items-center gap-1.5 text-sm font-semibold" style="color:var(--grad-1)">View details <i data-lucide="arrow-up-right" class="w-4 h-4 card-arrow"></i></span>
+      </button>
+
+      <button data-modal-open="mobile" class="card card-gradient-border p-7 text-left" data-reveal="up">
+        <div class="card-icon-wrap mb-5"><i data-lucide="smartphone" class="w-5 h-5"></i></div>
+        <h3 class="font-display text-lg font-semibold mb-2">Mobile App Development</h3>
+        <p class="text-sm text-[--grey-1] mb-5">Cross-platform Android and iOS applications with exceptional user experiences.</p>
+        <span class="inline-flex items-center gap-1.5 text-sm font-semibold" style="color:var(--grad-1)">View details <i data-lucide="arrow-up-right" class="w-4 h-4 card-arrow"></i></span>
+      </button>
+
+      <button data-modal-open="uiux" class="card card-gradient-border p-7 text-left" data-reveal="up">
+        <div class="card-icon-wrap mb-5"><i data-lucide="pen-tool" class="w-5 h-5"></i></div>
+        <h3 class="font-display text-lg font-semibold mb-2">UI/UX Design</h3>
+        <p class="text-sm text-[--grey-1] mb-5">Designing engaging digital experiences with user-centered interfaces.</p>
+        <span class="inline-flex items-center gap-1.5 text-sm font-semibold" style="color:var(--grad-1)">View details <i data-lucide="arrow-up-right" class="w-4 h-4 card-arrow"></i></span>
+      </button>
+
+      <button data-modal-open="cloud" class="card card-gradient-border p-7 text-left" data-reveal="up">
+        <div class="card-icon-wrap mb-5"><i data-lucide="cloud" class="w-5 h-5"></i></div>
+        <h3 class="font-display text-lg font-semibold mb-2">Cloud Solutions</h3>
+        <p class="text-sm text-[--grey-1] mb-5">Secure cloud deployment, hosting, migration, and infrastructure optimization.</p>
+        <span class="inline-flex items-center gap-1.5 text-sm font-semibold" style="color:var(--grad-1)">View details <i data-lucide="arrow-up-right" class="w-4 h-4 card-arrow"></i></span>
+      </button>
+
+      <button data-modal-open="automation" class="card card-gradient-border p-7 text-left" data-reveal="up">
+        <div class="card-icon-wrap mb-5"><i data-lucide="workflow" class="w-5 h-5"></i></div>
+        <h3 class="font-display text-lg font-semibold mb-2">Automation Solutions</h3>
+        <p class="text-sm text-[--grey-1] mb-5">Workflow automation, CRM integration, business process optimization.</p>
+        <span class="inline-flex items-center gap-1.5 text-sm font-semibold" style="color:var(--grad-1)">View details <i data-lucide="arrow-up-right" class="w-4 h-4 card-arrow"></i></span>
+      </button>
+
+      <button data-modal-open="marketing" class="card card-gradient-border p-7 text-left" data-reveal="up">
+        <div class="card-icon-wrap mb-5"><i data-lucide="megaphone" class="w-5 h-5"></i></div>
+        <h3 class="font-display text-lg font-semibold mb-2">Digital Marketing</h3>
+        <p class="text-sm text-[--grey-1] mb-5">SEO, Social Media Marketing, Branding, Content Marketing, and Lead Generation.</p>
+        <span class="inline-flex items-center gap-1.5 text-sm font-semibold" style="color:var(--grad-1)">View details <i data-lucide="arrow-up-right" class="w-4 h-4 card-arrow"></i></span>
+      </button>
+
+      <button data-modal-open="consultancy" class="card card-gradient-border p-7 text-left" data-reveal="up">
+        <div class="card-icon-wrap mb-5"><i data-lucide="lightbulb" class="w-5 h-5"></i></div>
+        <h3 class="font-display text-lg font-semibold mb-2">Startup Consultancy</h3>
+        <p class="text-sm text-[--grey-1] mb-5">Helping startups validate ideas, build MVPs, scale products, and prepare for investment.</p>
+        <span class="inline-flex items-center gap-1.5 text-sm font-semibold" style="color:var(--grad-1)">View details <i data-lucide="arrow-up-right" class="w-4 h-4 card-arrow"></i></span>
+      </button>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROCESS ================= -->
+<section class="py-24 bg-[--bg-secondary]">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-16" data-reveal="up">
+      <span class="section-eyebrow">Our Process</span>
+      <h2 class="font-display text-3xl sm:text-4xl font-bold mt-3">How We Work</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+      <div class="card p-7" data-reveal="up">
+        <span class="text-xs font-semibold" style="color:var(--grad-1)">Step 01</span>
+        <div class="card-icon-wrap my-4"><i data-lucide="search" class="w-5 h-5"></i></div>
+        <h3 class="font-display font-semibold mb-2">Discover</h3>
+        <p class="text-sm text-[--grey-1]">Understanding your goals and project requirements.</p>
+      </div>
+      <div class="card p-7" data-reveal="up">
+        <span class="text-xs font-semibold" style="color:var(--grad-1)">Step 02</span>
+        <div class="card-icon-wrap my-4"><i data-lucide="clipboard-list" class="w-5 h-5"></i></div>
+        <h3 class="font-display font-semibold mb-2">Plan</h3>
+        <p class="text-sm text-[--grey-1]">Creating an effective roadmap and technical strategy.</p>
+      </div>
+      <div class="card p-7" data-reveal="up">
+        <span class="text-xs font-semibold" style="color:var(--grad-1)">Step 03</span>
+        <div class="card-icon-wrap my-4"><i data-lucide="hammer" class="w-5 h-5"></i></div>
+        <h3 class="font-display font-semibold mb-2">Develop</h3>
+        <p class="text-sm text-[--grey-1]">Building high-quality digital products using modern technologies.</p>
+      </div>
+      <div class="card p-7" data-reveal="up">
+        <span class="text-xs font-semibold" style="color:var(--grad-1)">Step 04</span>
+        <div class="card-icon-wrap my-4"><i data-lucide="rocket" class="w-5 h-5"></i></div>
+        <h3 class="font-display font-semibold mb-2">Launch</h3>
+        <p class="text-sm text-[--grey-1]">Testing, deployment, and continuous support.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="py-20">
+  <div class="max-w-6xl mx-auto px-6 lg:px-8">
+    <div class="relative overflow-hidden rounded-3xl px-8 py-16 sm:px-16 text-center" style="background:var(--brand-gradient);" data-reveal="up">
+      <div class="absolute inset-0 hero-grid opacity-20"></div>
+      <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-4 relative">Have a Project in Mind?</h2>
+      <p class="text-white/85 max-w-xl mx-auto mb-8 relative">Tell us what you're building — we'll help you turn it into a scalable product.</p>
+      <a href="register.html" class="relative inline-flex items-center gap-2 bg-white text-[--grad-1] font-semibold px-7 py-3.5 rounded-xl shadow-lg hover:-translate-y-0.5 transition-transform">
+        Book a Free Consultation <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer id="site-footer"></footer>
+<div id="modal-root"></div>
+
+<script src="js/navbar.js"></script>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+<script src="js/footer.js"></script>
+</body>
+</html>

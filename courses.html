@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+  (function() {
+    try {
+      var saved = localStorage.getItem('algohub-theme');
+      var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    } catch (e) {}
+  })();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Courses — Algo Hub</title>
+<meta name="description" content="Professional courses in AI, machine learning, web development, digital marketing, video editing, trading, and freelancing at Algo Hub.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: { extend: { fontFamily: { display: ['Space Grotesk', 'sans-serif'], sans: ['Inter', 'sans-serif'] } } },
+  };
+</script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-sans" data-page="courses">
+<!-- ================= SPLASH SCREEN ================= -->
+<div id="splash-screen">
+  <img src="img/algohub-logo.png" alt="Algo Hub logo">
+</div>
+<header id="site-navbar"></header>
+
+<!-- ================= HERO ================= -->
+<section class="relative overflow-hidden py-20 lg:py-24">
+  <div class="hero-bg">
+    <div class="hero-grid"></div>
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+  </div>
+  <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center" data-reveal="up">
+    <span class="section-eyebrow">Our Courses</span>
+    <h1 class="font-display text-4xl sm:text-5xl font-bold mt-4 mb-6 leading-tight">
+      Professional Courses Designed for the Future
+    </h1>
+    <p class="text-lg text-[--grey-1] leading-relaxed max-w-2xl mx-auto">
+      Our training programs are carefully designed to equip learners with practical skills, real-world experience, and career opportunities in today's competitive digital economy.
+    </p>
+  </div>
+</section>
+
+<!-- ================= COURSES GRID ================= -->
+<section class="py-20">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="courses-grid">
+
+      <div class="card overflow-hidden" data-reveal="up">
+        <div class="h-40 flex items-center justify-center" style="background:var(--brand-gradient);"><i data-lucide="youtube" class="w-10 h-10 text-white/90"></i></div>
+        <div class="p-6">
+          <div class="flex gap-2 mb-3"><span class="badge badge-blue">8 Weeks</span><span class="badge badge-grey">Beginner</span></div>
+          <h3 class="font-display text-lg font-semibold mb-2">YouTube Automation</h3>
+          <p class="text-sm text-[--grey-1] mb-4">Master AI-powered content creation, monetization, SEO, and channel growth.</p>
+          <button data-modal-open="course-youtube" class="btn-secondary w-full">Enroll Now</button>
+        </div>
+      </div>
+
+      <div class="card overflow-hidden" data-reveal="up">
+        <div class="h-40 flex items-center justify-center" style="background:var(--brand-gradient);"><i data-lucide="briefcase" class="w-10 h-10 text-white/90"></i></div>
+        <div class="p-6">
+          <div class="flex gap-2 mb-3"><span class="badge badge-blue">6 Weeks</span><span class="badge badge-grey">Beginner</span></div>
+          <h3 class="font-display text-lg font-semibold mb-2">Fiverr Freelancing</h3>
+          <p class="text-sm text-[--grey-1] mb-4">Create professional gigs, attract international clients, and build a career.</p>
+          <button data-modal-open="course-fiverr" class="btn-secondary w-full">Enroll Now</button>
+        </div>
+      </div>
+
+      <div class="card overflow-hidden" data-reveal="up">
+        <div class="h-40 flex items-center justify-center" style="background:var(--brand-gradient);"><i data-lucide="clapperboard" class="w-10 h-10 text-white/90"></i></div>
+        <div class="p-6">
+          <div class="flex gap-2 mb-3"><span class="badge badge-blue">6 Weeks</span><span class="badge badge-grey">Beginner</span></div>
+          <h3 class="font-display text-lg font-semibold mb-2">Video Editing</h3>
+          <p class="text-sm text-[--grey-1] mb-4">Premiere Pro, After Effects, CapCut, and AI-powered editing tools.</p>
+          <button data-modal-open="course-video" class="btn-secondary w-full">Enroll Now</button>
+        </div>
+      </div>
+
+      <div class="card overflow-hidden" data-reveal="up">
+        <div class="h-40 flex items-center justify-center" style="background:var(--brand-gradient);"><i data-lucide="trending-up" class="w-10 h-10 text-white/90"></i></div>
+        <div class="p-6">
+          <div class="flex gap-2 mb-3"><span class="badge badge-blue">8 Weeks</span><span class="badge badge-grey">Intermediate</span></div>
+          <h3 class="font-display text-lg font-semibold mb-2">Trading & Financial Markets</h3>
+          <p class="text-sm text-[--grey-1] mb-4">Market fundamentals, technical analysis, risk management, and psychology.</p>
+          <button data-modal-open="course-trading" class="btn-secondary w-full">Enroll Now</button>
+        </div>
+      </div>
+
+      <div class="card overflow-hidden" data-reveal="up">
+        <div class="h-40 flex items-center justify-center" style="background:var(--brand-gradient);"><i data-lucide="sparkles" class="w-10 h-10 text-white/90"></i></div>
+        <div class="p-6">
+          <div class="flex gap-2 mb-3"><span class="badge badge-blue">10 Weeks</span><span class="badge badge-grey">Intermediate</span></div>
+          <h3 class="font-display text-lg font-semibold mb-2">Artificial Intelligence</h3>
+          <p class="text-sm text-[--grey-1] mb-4">Prompt Engineering, Generative AI, LLMs, and AI Automation.</p>
+          <button data-modal-open="course-ai" class="btn-secondary w-full">Enroll Now</button>
+        </div>
+      </div>
+
+      <div class="card overflow-hidden" data-reveal="up">
+        <div class="h-40 flex items-center justify-center" style="background:var(--brand-gradient);"><i data-lucide="network" class="w-10 h-10 text-white/90"></i></div>
+        <div class="p-6">
+          <div class="flex gap-2 mb-3"><span class="badge badge-blue">10 Weeks</span><span class="badge badge-grey">Advanced</span></div>
+          <h3 class="font-display text-lg font-semibold mb-2">Machine Learning</h3>
+          <p class="text-sm text-[--grey-1] mb-4">Python, Scikit-Learn, TensorFlow, and real-world datasets.</p>
+          <button data-modal-open="course-ml" class="btn-secondary w-full">Enroll Now</button>
+        </div>
+      </div>
+
+      <div class="card overflow-hidden" data-reveal="up">
+        <div class="h-40 flex items-center justify-center" style="background:var(--brand-gradient);"><i data-lucide="code-2" class="w-10 h-10 text-white/90"></i></div>
+        <div class="p-6">
+          <div class="flex gap-2 mb-3"><span class="badge badge-blue">12 Weeks</span><span class="badge badge-grey">Beginner</span></div>
+          <h3 class="font-display text-lg font-semibold mb-2">Web Development</h3>
+          <p class="text-sm text-[--grey-1] mb-4">HTML, CSS, Tailwind, JavaScript, React, PHP, Laravel, and Node.js.</p>
+          <button data-modal-open="course-web" class="btn-secondary w-full">Enroll Now</button>
+        </div>
+      </div>
+
+      <div class="card overflow-hidden" data-reveal="up">
+        <div class="h-40 flex items-center justify-center" style="background:var(--brand-gradient);"><i data-lucide="palette" class="w-10 h-10 text-white/90"></i></div>
+        <div class="p-6">
+          <div class="flex gap-2 mb-3"><span class="badge badge-blue">6 Weeks</span><span class="badge badge-grey">Beginner</span></div>
+          <h3 class="font-display text-lg font-semibold mb-2">Graphic Designing</h3>
+          <p class="text-sm text-[--grey-1] mb-4">Adobe Photoshop, Illustrator, Canva, and Figma.</p>
+          <button data-modal-open="course-graphic" class="btn-secondary w-full">Enroll Now</button>
+        </div>
+      </div>
+
+      <div class="card overflow-hidden" data-reveal="up">
+        <div class="h-40 flex items-center justify-center" style="background:var(--brand-gradient);"><i data-lucide="megaphone" class="w-10 h-10 text-white/90"></i></div>
+        <div class="p-6">
+          <div class="flex gap-2 mb-3"><span class="badge badge-blue">8 Weeks</span><span class="badge badge-grey">Beginner</span></div>
+          <h3 class="font-display text-lg font-semibold mb-2">Digital Marketing</h3>
+          <p class="text-sm text-[--grey-1] mb-4">SEO, Google Ads, Facebook Marketing, Email Marketing, and Analytics.</p>
+          <button data-modal-open="course-digital-marketing" class="btn-secondary w-full">Enroll Now</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="py-24 bg-[--bg-secondary]">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8">
+    <div class="text-center mb-14" data-reveal="up">
+      <span class="section-eyebrow">Questions</span>
+      <h2 class="font-display text-3xl sm:text-4xl font-bold mt-3">Frequently Asked Questions</h2>
+    </div>
+    <div class="space-y-4" id="faq-list">
+      <details class="card p-6 group" data-reveal="up">
+        <summary class="flex items-center justify-between cursor-pointer font-display font-semibold list-none">
+          Do I need prior experience?
+          <i data-lucide="chevron-down" class="w-5 h-5 transition-transform group-open:rotate-180"></i>
+        </summary>
+        <p class="text-sm text-[--grey-1] mt-3 leading-relaxed">No. Our beginner-friendly courses are designed for learners of all levels.</p>
+      </details>
+      <details class="card p-6 group" data-reveal="up">
+        <summary class="flex items-center justify-between cursor-pointer font-display font-semibold list-none">
+          Are the courses practical?
+          <i data-lucide="chevron-down" class="w-5 h-5 transition-transform group-open:rotate-180"></i>
+        </summary>
+        <p class="text-sm text-[--grey-1] mt-3 leading-relaxed">Yes. Every course includes hands-on projects, real-world case studies, and portfolio-building activities.</p>
+      </details>
+      <details class="card p-6 group" data-reveal="up">
+        <summary class="flex items-center justify-between cursor-pointer font-display font-semibold list-none">
+          Do you provide certificates?
+          <i data-lucide="chevron-down" class="w-5 h-5 transition-transform group-open:rotate-180"></i>
+        </summary>
+        <p class="text-sm text-[--grey-1] mt-3 leading-relaxed">Yes. Participants receive certificates upon successful course completion.</p>
+      </details>
+      <details class="card p-6 group" data-reveal="up">
+        <summary class="flex items-center justify-between cursor-pointer font-display font-semibold list-none">
+          Can startups hire Algo Hub?
+          <i data-lucide="chevron-down" class="w-5 h-5 transition-transform group-open:rotate-180"></i>
+        </summary>
+        <p class="text-sm text-[--grey-1] mt-3 leading-relaxed">Absolutely. We offer customized digital solutions, SaaS development, AI consulting, and long-term technical partnerships.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="py-20">
+  <div class="max-w-6xl mx-auto px-6 lg:px-8">
+    <div class="relative overflow-hidden rounded-3xl px-8 py-16 sm:px-16 text-center" style="background:var(--brand-gradient);" data-reveal="up">
+      <div class="absolute inset-0 hero-grid opacity-20"></div>
+      <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-4 relative">Become Part of the Algo Hub Community</h2>
+      <p class="text-white/85 max-w-xl mx-auto mb-8 relative">Connect with innovators, developers, freelancers, entrepreneurs, and AI enthusiasts.</p>
+      <a href="register.html" class="relative inline-flex items-center gap-2 bg-white text-[--grad-1] font-semibold px-7 py-3.5 rounded-xl shadow-lg hover:-translate-y-0.5 transition-transform">
+        Get Started <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer id="site-footer"></footer>
+<div id="modal-root"></div>
+
+<script src="js/navbar.js"></script>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+<script src="js/footer.js"></script>
+</body>
+</html>
